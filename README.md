@@ -27,15 +27,15 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|name|string|null: false,unique:true|
 |password|integer|null: false|
 |email|string|null:false|
 
 ### Association
-- has_many :tweets
-- has_many :comments
+- has_many groups,through:members
+- has_many :posts
 
-## tweetsテーブル
+## postsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -46,17 +46,31 @@ Things you may want to cover:
 ### Association
 
 - belongs_to: user
-- has_many: comments
+- has_many: groups
 
-## commentsテーブル
+## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null:false|
+|member|string|null:false,unique:true|
 |user_id|integer|null:false,foreign_key: true|
-|tweet_id|integer|null:false,foreign_key: true|
 
 ### Association
 
-- belongs_to: user
-- belongs_to: tweet
+- has_many:users
+- belongs_to: post
+- has_many:groups_users 
+
+## users_groupsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null:false,foreign_key:true|
+|groups_id|integer|null:false,foreign_key:true|
+### Association
+
+- belongs_to:group 
+- belongs_to:user
+
+
