@@ -45,8 +45,8 @@ Things you may want to cover:
 
 ### Association
 
-belongs_to: user
-has_many: comments
+- belongs_to: user
+- has_many: comments
 
 ## commentsテーブル
 
@@ -58,5 +58,5 @@ has_many: comments
 
 ### Association
 
-belongs_to: user
-belongs_to: tweet
+- belongs_to: user
+- belongs_to: tweet
