@@ -40,8 +40,8 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null:false|
-|image|text|null:false|
+|text|text||
+|image|text||
 |user_id|integer|foreign_key: true|
 
 ### Association
