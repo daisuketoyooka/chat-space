@@ -54,7 +54,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|integer|null:false|
+|name|string|null:false|
 
 ### Association
 
