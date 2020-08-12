@@ -34,6 +34,7 @@ Things you may want to cover:
 ### Association
 - has_many groups,through:members
 - has_many :posts
+- has_many :groups_users
 
 ## postsテーブル
 
