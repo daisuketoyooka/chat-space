@@ -47,22 +47,20 @@ Things you may want to cover:
 
 ### Association
 
-- belongs_to: user
-- belongs_to: group
+- belongs_to :user
+- belongs_to :group
 
 ## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null:false|
-|member|string|null:false,unique:true|
-|user_id|integer|null:false,foreign_key: true|
+|group_name|integer|null:false|
 
 ### Association
 
-- has_many:users
-- belongs_to: post
-- has_many:groups_users 
+- has_many :users
+- has_many :post
+- has_many :groups_users
 
 ## users_groupsテーブル
 
@@ -72,7 +70,7 @@ Things you may want to cover:
 |groups_id|integer|null:false,foreign_key:true|
 ### Association
 
-- belongs_to:group 
-- belongs_to:user
+- belongs_to :group 
+- belongs_to :user
 
 
